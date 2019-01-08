@@ -1,0 +1,55 @@
+header, footer, nav, #content {
+    width: 100%;
+}
+header {
+    height: 75px;
+}
+nav {
+    height: 150px;
+}
+.content-box {
+    display: block;
+    float: left;
+}
+.content-box.large {
+    width: 100%;
+    height: 125px;
+}
+.content-box.small {
+    width: 50%;
+    height: 250px;
+}
+footer {
+    clear: both;
+    height: 30px;
+}
+
+@media only screen and (min-device-width: 768px) {
+    /* desktop styles here */
+    #wrapper {
+        max-width: 960px;
+        margin: auto;
+    }
+    nav {
+        width: 20.8%;
+        height: 600px;
+    }
+    #content, footer {
+        width: 79.2%;
+    }
+    nav, #content, footer {
+        float: left;
+    }
+    .content-box.large {
+        width: 50%;
+        height: 200px;
+    }
+    .content-box.small {
+        width: 25%;
+        height: 250px;
+    }
+    footer {
+        height: 150px;
+        clear: none;
+    }
+}

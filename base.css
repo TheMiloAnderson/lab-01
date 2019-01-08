@@ -1,0 +1,4 @@
+header, footer, nav, .content-box {
+    border: 1px solid steelblue;
+    box-sizing: border-box;
+}
