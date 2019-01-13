@@ -3,9 +3,11 @@ header, footer, nav, #content {
 }
 header {
     height: 75px;
+    line-height: 75px;
 }
 nav {
     height: 150px;
+    line-height: 150px;
 }
 .content-box {
     display: block;
@@ -14,14 +16,17 @@ nav {
 .content-box.large {
     width: 100%;
     height: 125px;
+    line-height: 125px;
 }
 .content-box.small {
     width: 50%;
     height: 250px;
+    line-height: 250px;
 }
 footer {
     clear: both;
     height: 30px;
+    line-height: 30px;
 }
 
 @media only screen and (min-device-width: 768px) {
@@ -33,6 +38,7 @@ footer {
     nav {
         width: 20.8%;
         height: 600px;
+        line-height: 600px;
     }
     #content, footer {
         width: 79.2%;
@@ -43,13 +49,16 @@ footer {
     .content-box.large {
         width: 50%;
         height: 200px;
+        line-height: 200px;
     }
     .content-box.small {
         width: 25%;
         height: 250px;
+        line-height: 250px;
     }
     footer {
-        height: 150px;
         clear: none;
+        height: 150px;
+        line-height: 150px;
     }
 }
