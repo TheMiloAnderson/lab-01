@@ -1,4 +1,8 @@
 header, footer, nav, .content-box {
     border: 1px solid steelblue;
     box-sizing: border-box;
+    font-size: 1.2em;
+}
+header, nav, #content > .content-box, footer {
+    text-align: center;
 }
