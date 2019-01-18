@@ -1,64 +1,78 @@
-header, footer, nav, #content {
-    width: 100%;
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 75px 150px 125px 125px 250px 250px;
 }
 header {
-    height: 75px;
-    line-height: 75px;
+  grid-column: 1 / 3;
+  grid-row: 1 span 1;
 }
 nav {
-    height: 150px;
-    line-height: 150px;
+  grid-column: 1 / 3;
+  grid-row: 1 span 1;
 }
-.content-box {
-    display: block;
-    float: left;
+#content {
+  display: grid;
+  grid-column: 1 / 3;
+  grid-row: span 4;
 }
 .content-box.large {
-    width: 100%;
-    height: 125px;
-    line-height: 125px;
+  grid-column: 1 / 3;
+  grid-row: span 1;
 }
 .content-box.small {
-    width: 50%;
-    height: 250px;
-    line-height: 250px;
+  grid-column: span 1;
 }
 footer {
-    clear: both;
-    height: 30px;
-    line-height: 30px;
+  grid-column: 1 / 3;
 }
 
 @media only screen and (min-device-width: 768px) {
-    /* desktop styles here */
-    #wrapper {
-        max-width: 960px;
-        margin: auto;
-    }
-    nav {
-        width: 20.8%;
-        height: 600px;
-        line-height: 600px;
-    }
-    #content, footer {
-        width: 79.2%;
-    }
-    nav, #content, footer {
-        float: left;
-    }
-    .content-box.large {
-        width: 50%;
-        height: 200px;
-        line-height: 200px;
-    }
-    .content-box.small {
-        width: 25%;
-        height: 250px;
-        line-height: 250px;
-    }
-    footer {
-        clear: none;
-        height: 150px;
-        line-height: 150px;
-    }
+  #wrapper {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 200px 200px 250px 250px 150px;
+    margin: auto;
+  }
+  header {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+  }
+  nav {
+    grid-column: 1 / 2;
+    grid-row: 2 / 7;
+  }
+  #content {
+    display: grid;
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+  }
+  .content-box.large {
+      grid-column: 1 / span 2;
+      grid-row: span 1;
+  }
+  .content-box.small {
+      grid-column: span 1;
+      grid-row: span 1;
+  }
+  footer {
+      grid-column: 2 / 6;
+      grid-row: span 1;
+  }
+}
+
+@media only screen and (min-device-width: 1200px) {
+  #wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 180px 200px 200px 250px 250px 150px;
+    max-width: 1200px;
+    margin: auto;
+  }
+/*
+  #content {
+    display: grid;
+    grid-auto-flow: column;
+  }
+*/
 }
